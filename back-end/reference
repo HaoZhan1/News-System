@@ -1,0 +1,35 @@
+pip3 install jsonrpclib-pelix
+
+server = SimpleJSONRPCServer
+server.register_function(fun, 'funName')
+server.serve_forever
+
+
+------------------------
+MONGO_DB
+
+brew install mongodb
+mongodb start
+mongod
+
+pip3 install pymongo
+
+db = MongoClient(,)[dbName]
+db.collections.method()
+or db["collectionsName"]
+
+http://api.mongodb.com/python/current/tutorial.html
+------------------------
+cloudAMQP
+pip3 install pika
+
+pika.BlockingConnection
+connection.channel()
+channel.queue_declare()
+channel.basic_publish
+channel.basic_get
+
+need to use json.dumps() & json.loads()
+//Byte to String decode('utf-8')
+
+------------------------

@@ -1,0 +1,30 @@
+sudo npm install express-generator -g
+express server
+npm install
+npm start
+package.json nodemon ..
+
+
+app.js
+app.use('/', index)
+index.js
+router.get('/', (req, res) => {
+  res.sendFile('', {root: })
+});
+news.js
+router.get('/', (req, res) => {
+  news = [];
+  res.json(news);
+});
+
+npm install jayson --save
+
+jayson.client.http
+function(params, callback) {
+  client.request('funName', [params], function(err, response) {
+    callback(response);
+  });
+}
+
+// run js
+node .js

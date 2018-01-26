@@ -1,0 +1,20 @@
+Life Loop:
+https://www.jianshu.com/p/4784216b8194
+
+sudo npm install -g create-react-app
+
+create-react-app appName
+
+src
+- /app - App.js + App.css
+- /newsPanel - NewsPanel.js + NewsPanel.css
+1) use Request() to getData from BackEnd
+2) handScroll
+3) traverse to return list of NewsCard
+- /newsCard - NewsCard.js + NewsCard.css
+1）props.name
+2) bind js event
+-index.js ReactDOM.render();
+
+npm start
+npm run build 
