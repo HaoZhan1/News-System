@@ -4,6 +4,7 @@ npm install
 npm start
 package.json nodemon ..
 
+------------------------
 
 app.js
 app.use('/', index)
@@ -16,6 +17,8 @@ router.get('/', (req, res) => {
   news = [];
   res.json(news);
 });
+
+------------------------
 
 npm install jayson --save
 

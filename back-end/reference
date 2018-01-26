@@ -33,3 +33,4 @@ need to use json.dumps() & json.loads()
 //Byte to String decode('utf-8')
 
 ------------------------
+pip3 install pylint
