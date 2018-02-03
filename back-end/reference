@@ -17,7 +17,7 @@ pip3 install pymongo
 db = MongoClient(,)[dbName]
 db.collections.method()
 or db["collectionsName"]
-
+https://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
 http://api.mongodb.com/python/current/tutorial.html
 ------------------------
 cloudAMQP
