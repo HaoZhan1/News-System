@@ -34,3 +34,61 @@ need to use json.dumps() & json.loads()
 
 ------------------------
 pip3 install pylint
+
+
+
+------------------------
+news_api_client
+requests.get()
+add source,publishedAt params to the json
+
+------------------------
+pip3 install redis
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+redis_client = redis.StrictRedis(REDIS_HOST, REDIS_PORT)
+redis.get()
+redis.set()
+redis.expire()
+
+https://pypi.python.org/pypi/redis
+------------------------
+AMQP_client
+
+QUEUE_URL = "amqp://svowqrcq:HFkG2SlMhRFeIuGKUjJTo7nGYkcnhzOj@termite.rmq.cloudamqp.com/svowqrcq"
+QUEUE_NAME = "news-test"
+cloudAMQP_client = CloudAMQPClient(QUEUE_URL, QUEUE_NAME)
+cloudAMQP_client.sendMessage()
+cloudAMQP_client.sleep(SLEEP_TIME_TASK_SECONDS)
+
+
+------------------------
+news_scraper -- used for parse html
+random
+request.session().get()
+
+------------------------
+news_monitor
+news_api get news
+if not in Redis
+send message
+
+------------------------
+news_fetcher
+pip3 install newspaper3k
+receive message
+handle message or we can use newspaper rep to get text
+send message
+
+------------------------
+pip3 install sklearn/numpy/scipy/python-dateutil
+
+tf-idf model
+http://blog.sina.com.cn/s/blog_be8e37a80101eew5.html
+
+------------------------
+news_deduper
+use tf-idf to get rid of duplicate content
+and then store into the mongoDB
+------------------------

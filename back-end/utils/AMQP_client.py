@@ -16,14 +16,14 @@ class CloudAMQPClient:
         self.channel.basic_publish(exchange = '',
                                    routing_key = self.queue_name,
                                    body = json.dumps(message))
-        print("Send message to %s : %s" % (self.queue_name, message))
+        #print("Send message to %s : %s" % (self.queue_name, message))
 
     #basic_get & basic_ack
     def receiveMessage(self):
         #callback
         method, params, body = self.channel.basic_get(self.queue_name)
         if method:
-            print("Receive message from %s : %s" % (self.queue_name, body.decode('utf-8')))
+            #print("Receive message from %s : %s" % (self.queue_name, body.decode('utf-8')))
             self.channel.basic_ack(method.delivery_tag)
             #convert B yte to String
             return json.loads(body.decode('utf-8'))

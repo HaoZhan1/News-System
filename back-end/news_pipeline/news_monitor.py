@@ -45,10 +45,12 @@ while True:
         news_digest = hashlib.md5(news['title'].encode('utf-8')).hexdigest()
         if not redis_client.get(news_digest):
             number_of_news = number_of_news + 1
+            news['digest'] =  news_digest
             redis_client.set(news_digest, 'hh')
             #set expire time
             redis_client.expire(news_digest, NEWS_TIME_OUT_IN_SECONDS)
             #send message to queue
             cloudAMQP_client.sendMessage(news)
     print('%s number of news' % number_of_news)
+    #sleep
     cloudAMQP_client.sleep(SLEEP_TIME_TASK_SECONDS)
