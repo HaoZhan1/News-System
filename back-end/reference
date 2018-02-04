@@ -92,3 +92,18 @@ news_deduper
 use tf-idf to get rid of duplicate content
 and then store into the mongoDB
 ------------------------
+operations.py
+use redis to store index for different user
+
+------------------------
+service.py
+register function
+{
+	"jsonrpc": "2.0",
+	"id": 1,
+	"method": "getNewsSummariesForUser",
+	"params": ["user", 1]
+}
+------------------------
+rpc_client.js
+client.request()

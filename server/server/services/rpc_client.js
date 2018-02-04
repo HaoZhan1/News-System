@@ -11,8 +11,16 @@ function add(a, b, callback) {
     if(err) throw err;
     callback(response.result);
   })
-}
+};
+
+function getNewsSummariesForUser(user_id, page_num, callback) {
+  client.request('getNewsSummariesForUser',[user_id, page_num], function(err, res) {
+    if(err) throw err;
+    callback(res.result);
+  });
+};
 
 module.exports = {
-  add: add
+  add: add,
+  getNewsSummariesForUser:getNewsSummariesForUser
 }

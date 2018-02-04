@@ -13,7 +13,7 @@ NEWS_TIME_OUT_IN_SECONDS = 3600 * 24 * 3
 SLEEP_TIME_TASK_SECONDS = 10
 
 NEWS_SOURCES = [
-    'bbc-news',
+    'bbc-newson',
     'bbc-sport',
     'bloomberg',
     'cnn',
