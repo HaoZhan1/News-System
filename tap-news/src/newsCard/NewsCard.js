@@ -1,10 +1,20 @@
 import React from 'react';
 import './NewsCard.css';
 
+
 class NewsCard extends React.Component {
   redirectToUrl(url, event) {
     event.preventDefault();
+    this.sendClickLog();
     window.open(url, '_blank');
+  }
+  sendClickLog() {
+    const url = "http://localhost:3000/news/userId" + "/testUser" + "/newsId/" + this.props.news.digest;
+    const request = new Request(encodeURI(url), {
+      method: "POST",
+      //headers: {'Authorization':'bearer' + Auth.getToken()},
+    });
+    fetch(request);
   }
   //props get data from parentComponent
   render() {
@@ -33,10 +43,7 @@ class NewsCard extends React.Component {
            </div>
 
     );
-  };
-
-
-
+  }
 }
 
 

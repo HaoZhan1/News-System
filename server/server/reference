@@ -31,3 +31,17 @@ function(params, callback) {
 
 // run js
 node .js
+-------------------------
+
+client: npm run build
+server: npm start
+
+-------------------------
+news.js
+router.post(url, function(req, res, next))
+req.params[]
+res.json()
+res.status()
+
+rpc_client.js
+client.request("", [], function(err, res))

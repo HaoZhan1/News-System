@@ -17,4 +17,11 @@ src
 -index.js ReactDOM.render();
 
 npm start
-npm run build 
+npm run build
+
+
+-------------
+NewsCard.js
+onClick
+Request()
+fetch(request)

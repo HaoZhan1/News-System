@@ -91,9 +91,10 @@ http://blog.sina.com.cn/s/blog_be8e37a80101eew5.html
 news_deduper
 use tf-idf to get rid of duplicate content
 and then store into the mongoDB
+
 ------------------------
-operations.py
-use redis to store index for different user
+operations.py(achieve functions)
+redis to store user_id : digestList
 
 ------------------------
 service.py
@@ -106,4 +107,31 @@ register function
 }
 ------------------------
 rpc_client.js
+jayson.client
 client.request()
+
+------------------------
+rest & rpc & backend Function
+
+newsPanel.js -- router.get() - rpcClient -- rpcServer -- redis + MONGO_DB
+																jayson.client.request / server.resgiter_method
+
+------------------------
+service.py
+logNewsClickForUser
+operations.py
+cloudAMQP_client.sendMessage()
+
+------------------------
+recommendation_services
+receiveMessage
+handle_message(construct the preference_table use time decay model)
+sleep
+https://pypi.python.org/pypi/python-jsonrpc
+
+newsCard.js -- router.post() -- rpcClient.request - rpcServcer.register_function - operations sendMessage - click_log_process
+                                                                                                            use pyjsonrpc receiveMessage + update the preferenceDataBase
+
+getNewsSummariesForUser-news_recommandation_client-recommendation_services
+topPreference   pyjsonrpc.HttpClient.call('', params)   pyjsonrpc.ThreadingHttpServer(RequestHandlerClass)
+------------------------
