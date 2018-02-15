@@ -1,3 +1,4 @@
+python-jsonrpc
 jsonrpclib-pelix
 pika
 pymongo

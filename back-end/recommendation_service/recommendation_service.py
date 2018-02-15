@@ -1,7 +1,8 @@
+import operator
 import os
 import sys
-import operator
 import pyjsonrpc
+
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "utils"))
 import mongodb_client
@@ -24,9 +25,9 @@ class RequestHandler(pyjsonrpc.HttpRequestHandler):
             return []
         sorted_tuples = sorted(model['preference'].items(), key=operator.itemgetter(1), reverse=True)
         sorted_list = [item[0] for item in sorted_tuples]
-        sorted_value_list = [item[1] for item in sorted_tuples
+        sorted_value_list = [item[1] for item in sorted_tuples]
         #make no sense
-        if isclose(float(sorted_value_list[0]), float(sorted_value_list[0])):
+        if isclose(float(sorted_value_list[0]), float(sorted_value_list[-1])):
             return []
         return sorted_list
 
