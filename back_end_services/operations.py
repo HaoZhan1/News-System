@@ -12,7 +12,7 @@ import mongodb_client
 import news_recommandation_client
 
 NEWS_TABLE_NAME = "newstest"
-NEWS_LIST_BATCH_SIZE = 10
+NEWS_LIST_BATCH_SIZE = 20
 NEWS_LIMIT = 200
 USER_NEWS_TIME_OUT_IN_SECONDES = 60
 

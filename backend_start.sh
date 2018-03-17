@@ -2,7 +2,7 @@
 redis-server
 brew services start mongodb
 
-cd back-end/recommendation_service
+cd back_end_services/recommendation_service
 python click_log_process.py &
 python recommendation_service.py &
 
