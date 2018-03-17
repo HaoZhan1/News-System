@@ -1,1 +1,1 @@
-# News-System
+# Real Time News Scraping and Recommendation System
